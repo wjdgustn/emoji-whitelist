@@ -1,0 +1,22 @@
+{
+  "name": "emoji-whitelist",
+  "version": "1.0.0",
+  "description": "Discord emoji whitelist manager.",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjdgustn/emoji-whitelist.git"
+  },
+  "author": "HYONSU",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/wjdgustn/emoji-whitelist/issues"
+  },
+  "homepage": "https://github.com/wjdgustn/emoji-whitelist#readme",
+  "dependencies": {
+    "discord.js": "github:iShibi/discord.js#fix-emoji-roles-remove"
+  }
+}
