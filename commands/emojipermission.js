@@ -1,6 +1,6 @@
 module.exports = {
     info: {
-        name: 'debugemoji',
+        name: 'emoji',
         description: '이모지 관련 설정입니다.',
         options: [
             {
@@ -91,8 +91,8 @@ module.exports = {
                 index++;
             });
 
-            return interaction.reply(list.join('\n'), {
-                ephemeral: true
+            return interaction.reply((list.join('\n') || '목록 비어 있음'), {
+                ephemeral: false
             });
         }
 
