@@ -1,6 +1,6 @@
 module.exports = {
     info: {
-        name: 'emoji',
+        name: 'debugemoji',
         description: '이모지 관련 설정입니다.',
         options: [
             {
@@ -64,6 +64,13 @@ module.exports = {
         ]
     },
     handler: async interaction => {
+        console.log(interaction.member.permissions.has('MANAGE_EMOJIS'));
+        if(!interaction.member.permissions.has('MANAGE_EMOJIS')) {
+            return interaction.reply('권한이 없습니다.', {
+                ephemeral: true
+            });
+        }
+
         const action = interaction.options[0].options[0].name;
         const emojiname = interaction.options[0].options[0].options[0].value;
 
